@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Richard Okiti | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #1b1b4b, #070714);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+            /* Futuristic grid background */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+                background-size: 40px 40px;
+                pointer-events: none;
+            }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            min-height: 90vh;
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            color: #00ffff;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff;
+        }
+
+
+        .headline {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            color: #ff4cff;
+            text-shadow: 0 0 15px #ff4cff;
+        }
+
+
+        .about {
+            margin-top: 25px;
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #d8d8ff;
+        }
+
+
+
+        /* Avatar */
+        .avatar-box {
+            width: 300px;
+            height: 300px;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 3px solid #00ffff;
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 0 20px #00ffff, 0 0 50px rgba(0,255,255,0.3);
+        }
+
+
+            .avatar-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+
+        /* Work Section */
+
+        section {
+            margin-top: 70px;
+        }
+
+
+        .section-title {
+            font-size: 2.5rem;
+            border-left: 5px solid #ff4cff;
+            padding-left: 15px;
+            text-shadow: 0 0 15px #ff4cff;
+        }
+
+
+
+        .work-area {
+            margin-top: 30px;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 2px solid rgba(0,255,255,0.3);
+        }
+
+
+
+        /* Project Card */
+
+        .project-card {
+            background: rgba(0,0,0,0.35);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #00ffff;
+        }
+
+
+            .project-card h3 {
+                color: #00ffff;
+                font-size: 2rem;
+            }
+
+
+            .project-card p {
+                margin: 15px 0;
+                color: #ddd;
+                line-height: 1.6;
+            }
+
+
+
+        .project-link {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: linear-gradient(90deg,#00ffff,#ff4cff);
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+
+
+            .project-link:hover {
+                transform: scale(1.08);
+                box-shadow: 0 0 25px #00ffff;
+            }
+
+
+
+        /* Animation */
+
+        .hero {
+            animation: fadeIn 1s ease;
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* Mobile */
+
+        @media(max-width:800px) {
+
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+
+            .about {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .avatar-box {
+                width: 230px;
+                height: 230px;
+            }
+
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <main class="hero">
+
+
+            <div class="intro">
+
+
+                <h1>
+                    Richard Okiti
+                </h1>
+
+
+                <div class="headline">
+                    15-year-old game developer and hardware enthusiast
+                </div>
+
+
+
+                <p class="about">
+
+                    I'm a young creator passionate about building games, software,
+                    and futuristic technology. I enjoy programming, designing game
+                    experiences, exploring hardware, and creating projects that push
+                    my creativity further.
+
+                </p>
+
+
+
+            </div>
+
+
+
+            <div class="avatar-box">
+
+                <!-- 500x500 avatar image -->
+                <img src="image-logo.png" alt="Richard Okiti Avatar">
+
+            </div>
+
+
+
+        </main>
+
+
+
+
+
+        <section id="work">
+
+
+            <h2 class="section-title">
+                My Work
+            </h2>
+
+
+
+            <div class="work-area">
+
+
+
+                <div class="project-card">
+
+
+                    <h3>
+                        Mega Blaster X
+                    </h3>
+
+
+
+                    <p>
+
+                        A game created by Richard Okiti.
+                        Replace this text with your game's description,
+                        features, and technology used.
+
+                    </p>
+
+
+
+                    <a class="project-link" href="https://efetoborerichardokiti.github.io/MEGA-BLASTER-X/" target="_blank">
+
+                        Play Game
+
+                    </a>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
